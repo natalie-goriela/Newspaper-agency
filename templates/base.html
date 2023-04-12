@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    Newspaper
+  </title>
+
+  <!-- Fontawesome -->
+  <link type="text/css" href="{{ ASSETS_ROOT }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- Pixel CSS -->
+  <link type="text/css" href="{{ ASSETS_ROOT }}/css/pixel.css" rel="stylesheet">
+  <link type="text/css" href="{{ ASSETS_ROOT }}/css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+{% include 'includes/navigation.html' %}
+
+<main>
+  {% block content %}{% endblock %}
+  {% block pagination %}
+    {% include "includes/pagination.html" %}
+  {% endblock %}
+</main>
+
+{% include 'includes/footer.html' %}
+
+</body>
+</html>
