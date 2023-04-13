@@ -5,8 +5,8 @@ from django.views import generic
 
 from newspaper.forms import (
     ArticleForm,
-    RedactorCreationForm,
-    RedactorUpdateForm
+    RedactorCreateForm,
+    RedactorUpdateForm, ArticleTitleSearchForm
 )
 from newspaper.models import Redactor, Topic, Article
 
@@ -31,6 +31,23 @@ class ArticleListView(generic.ListView):
     model = Article
     paginate_by = 4
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(ArticleListView, self).get_context_data(**kwargs)
+        title = self.request.GET.get("title", "")
+        context["search_form"] = ArticleTitleSearchForm(initial={
+            "title": title
+        })
+        return context
+
+    def get_queryset(self):
+        queryset = Article.objects.all()
+        title = self.request.GET.get("title")
+
+        if title:
+            return queryset.filter(title__icontains=title)
+
+        return queryset
+
 
 class ArticleDetailView(generic.DetailView):
     model = Article
@@ -50,7 +67,12 @@ class ArticleDeleteView(LoginRequiredMixin, generic.DeleteView):
 class ArticleUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Article
     fields = ["title", "content", "topic", "publishers"]
-    success_url = reverse_lazy("newspaper:article-detail")
+
+    def get_success_url(self):
+        return reverse_lazy(
+            "newspaper:article-detail",
+            kwargs={'pk': self.kwargs['pk']}
+        )
 
 
 class RedactorListView(generic.ListView):
@@ -65,7 +87,7 @@ class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
 
 class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
     model = Redactor
-    form_class = RedactorCreationForm
+    form_class = RedactorCreateForm
     success_url = reverse_lazy("newspaper:redactor-list")
 
 
@@ -84,4 +106,24 @@ class RedactorDeleteView(generic.DeleteView):
     model = Redactor
     success_url = reverse_lazy("newspaper:redactor-list")
 
+
+class TopicListView(generic.ListView):
+    model = Topic
+    paginate_by = 6
+
+
+class TopicDetailView(generic.DetailView):
+    model = Topic
+    queryset = Topic.objects.all().prefetch_related("articles__publishers")
+
+
+class TopicCreateView(generic.CreateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("newspaper:topic-list")
+
+
+class TopicDeleteView(generic.DeleteView):
+    model = Topic
+    success_url = reverse_lazy("newspaper:topic-list")
 
