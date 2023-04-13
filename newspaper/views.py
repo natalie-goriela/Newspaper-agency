@@ -6,7 +6,8 @@ from django.views import generic
 from newspaper.forms import (
     ArticleForm,
     RedactorCreateForm,
-    RedactorUpdateForm, ArticleTitleSearchForm
+    RedactorUpdateForm,
+    ArticleTitleSearchForm,
 )
 from newspaper.models import Redactor, Topic, Article
 
@@ -34,13 +35,11 @@ class ArticleListView(generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ArticleListView, self).get_context_data(**kwargs)
         title = self.request.GET.get("title", "")
-        context["search_form"] = ArticleTitleSearchForm(initial={
-            "title": title
-        })
+        context["search_form"] = ArticleTitleSearchForm(initial={"title": title})
         return context
 
     def get_queryset(self):
-        queryset = Article.objects.all()
+        queryset = Article.objects.all().prefetch_related("topic", "publishers")
         title = self.request.GET.get("title")
 
         if title:
@@ -70,8 +69,7 @@ class ArticleUpdateView(LoginRequiredMixin, generic.UpdateView):
 
     def get_success_url(self):
         return reverse_lazy(
-            "newspaper:article-detail",
-            kwargs={'pk': self.kwargs['pk']}
+            "newspaper:article-detail", kwargs={"pk": self.kwargs["pk"]}
         )
 
 
@@ -82,7 +80,9 @@ class RedactorListView(generic.ListView):
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor
-    queryset = Redactor.objects.all().prefetch_related("articles__topic")
+    queryset = Redactor.objects.all().prefetch_related(
+        "articles__topic",
+    )
 
 
 class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
@@ -97,8 +97,7 @@ class RedactorUpdateView(generic.UpdateView):
 
     def get_success_url(self):
         return reverse_lazy(
-            "newspaper:redactor-detail",
-            kwargs={'pk': self.kwargs['pk']}
+            "newspaper:redactor-detail", kwargs={"pk": self.kwargs["pk"]}
         )
 
 
@@ -126,4 +125,3 @@ class TopicCreateView(generic.CreateView):
 class TopicDeleteView(generic.DeleteView):
     model = Topic
     success_url = reverse_lazy("newspaper:topic-list")
-

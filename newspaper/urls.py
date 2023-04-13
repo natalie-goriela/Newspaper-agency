@@ -14,18 +14,15 @@ from newspaper.views import (
     RedactorDeleteView,
     TopicListView,
     TopicDetailView,
-    TopicCreateView, TopicDeleteView,
+    TopicCreateView,
+    TopicDeleteView,
 )
 
 
 urlpatterns = [
     path("", index, name="index"),
     path("articles/", ArticleListView.as_view(), name="article-list"),
-    path(
-        "articles/<int:pk>",
-        ArticleDetailView.as_view(),
-        name="article-detail"
-    ),
+    path("articles/<int:pk>", ArticleDetailView.as_view(), name="article-detail"),
     path(
         "articles/create/",
         ArticleCreateView.as_view(),
@@ -42,11 +39,7 @@ urlpatterns = [
         name="article-delete",
     ),
     path("redactors/", RedactorListView.as_view(), name="redactor-list"),
-    path(
-        "redactors/<int:pk>/",
-        RedactorDetailView.as_view(),
-        name="redactor-detail"
-    ),
+    path("redactors/<int:pk>/", RedactorDetailView.as_view(), name="redactor-detail"),
     path(
         "redactors/create/",
         RedactorCreateView.as_view(),
@@ -63,11 +56,7 @@ urlpatterns = [
         name="redactor-delete",
     ),
     path("topics/", TopicListView.as_view(), name="topic-list"),
-    path(
-        "topics/<int:pk>/",
-        TopicDetailView.as_view(),
-        name="topic-detail"
-    ),
+    path("topics/<int:pk>/", TopicDetailView.as_view(), name="topic-detail"),
     path(
         "topics/create/",
         TopicCreateView.as_view(),
