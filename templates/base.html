@@ -11,14 +11,13 @@
   <link type="text/css" href="{{ ASSETS_ROOT }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <!-- Pixel CSS -->
   <link type="text/css" href="{{ ASSETS_ROOT }}/css/pixel.css" rel="stylesheet">
-  <link type="text/css" href="{{ ASSETS_ROOT }}/css/styles.css" rel="stylesheet">
 
 </head>
 <body>
 
 {% include 'includes/navigation.html' %}
 
-<main>
+<main class="main-size">
   {% block content %}{% endblock %}
   {% block pagination %}
     {% include "includes/pagination.html" %}
