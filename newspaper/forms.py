@@ -21,7 +21,7 @@ class ArticleForm(forms.ModelForm):
         fields = ["title", "content", "topic", "publishers"]
 
 
-class RedactorCreationForm(UserCreationForm):
+class RedactorCreateForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = Redactor
         fields = UserCreationForm.Meta.fields + (
@@ -34,8 +34,18 @@ class RedactorCreationForm(UserCreationForm):
 class RedactorUpdateForm(forms.ModelForm):
     class Meta(UserCreationForm.Meta):
         model = Redactor
-        fields = UserCreationForm.Meta.fields + (
+        fields = (
             "first_name",
             "last_name",
+            "email",
             "years_of_experience"
         )
+
+
+class ArticleTitleSearchForm(forms.Form):
+    title = forms.CharField(
+        max_length=255,
+        required=True,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Search by title..."})
+    )
