@@ -27,7 +27,8 @@ pip install -r requirements.txt
 ```
    
 The secret key to this project is saved within .env file, which is hidden.
-You can create your own `.env` file to store your `SECRET_KEY` like it is shown in `.env_sample` file. 
+You can create your own `.env` file to store your `SECRET_KEY`, `DB_NAME` and other environment 
+variables like it is shown in `.env_sample` file. 
 
 After running migrations, use the following command to load prepared data from fixture:
   
