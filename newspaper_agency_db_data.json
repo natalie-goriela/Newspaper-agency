@@ -1,0 +1,236 @@
+[
+  {
+    "model": "newspaper.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Politics"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Business"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Science"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Health"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Sports"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Arts"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 7,
+    "fields": {
+      "name": "Food"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Crime"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "gary_cole",
+      "first_name": "Gary",
+      "last_name": "Cole",
+      "email": "gary_cole@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "years_of_experience": 15,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "rebecca_thomas",
+      "first_name": "Rebecca",
+      "last_name": "Thomas",
+      "email": "rebecca_thomas@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:17:04Z",
+      "years_of_experience": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$QtPol3T7x9quBj4BnbnVwW$UwT4kihkRfSvQEWEeuqVKwMgis2ikKVZfJDBcQMvOKY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "henry_james",
+      "first_name": "Henry",
+      "last_name": "James",
+      "email": "henry_james@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "years_of_experience": 12,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "matthew_willis",
+      "first_name": "Matthew",
+      "last_name": "Willis",
+      "email": "matthew_willis@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "years_of_experience": 6,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "freddie_lounds",
+      "first_name": "Freddie",
+      "last_name": "Lounds",
+      "email": "freddie_lounds@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 14,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.article",
+    "pk": 1,
+    "fields": {
+      "title": "There’s So Much to Love About Tofu",
+      "content": "These are good times for tofu lovers, with an expanding market and growing options.\n\nWhen Jenny Yang bought the Chicago-based company Phoenix Bean in 2006, she was keeping it from going out of business. Now, she is among a number of producers who are expanding offerings to include items like Chinese-style smoked tofu and tofu noodles.\n\n“Tofu is not just a block,” said Ms. Yang, whose small-batch products feature local ingredients like Illinois soybeans grown specifically for her brand and Great Lakes water. “We have baked, we have shredded tofu, we have flavored.”\n\nTofu is a staple of cooking in China, where it was invented 2,000 years ago, and throughout Asia. In the United States, tofu consumption has roughly doubled — to 9 percent of domestic households — since before the pandemic, according to Pulmuone Foods, the country’s leading producer. (The market is estimated at $142 million, up from $100.6 million in 2019.) And makers are preparing for even greater growth: Pulmuone has significantly increased production capacity, as has Phoenix Bean.\n\n“We are ready to get to the next phase, to provide people with different options,” Ms. Yang said.\n\nThe rising popularity of plant-based cooking is also seeding a groundswell of interest in celebrating tofu’s power and potential. If you’re new to tofu — or even if you’re not — you may not know the full depth and breadth of styles, and what to use when. Don’t let that hinder you. In fact, you can consider tofu as falling into three broad categories: basic, chewy and intensely flavored.",
+      "date_of_publish": "2022-08-14T14:30:09Z",
+      "topic": [
+        4,
+        7
+      ],
+      "publishers": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "newspaper.article",
+    "pk": 2,
+    "fields": {
+      "title": "Jascha Heifetz in the Case of the Violinist and the Fanatical Doorman",
+      "content": "Nothing seemed amiss when a car dropped Jascha Heifetz back at the King David Hotel on April 16, 1953, after a recital at Edison Hall in Jerusalem.\n\nHeifetz had played the program, which included Richard Strauss’s E flat violin sonata, to his usual exacting standards and to thunderous applause.\n\nA lone doorman greeted his car, sandwiched between two police Jeeps, when it arrived at the hotel just after midnight. Having safely ferried Heifetz and his entourage — his bodyguard, his son, his accompanist — to the King David, the Jeeps drove away.\n\nThe bodyguard got out of the car first and went through the hotel’s revolving door. Heifetz, carrying his violin case, was next. But before he could enter, the doorman rushed up to him, speaking Hebrew words Heifetz couldn’t understand.\n\nThis was no doorman. He held an iron bar in his hand and brought the weapon down on Heifetz’s right arm, smashing his hand.\n\nThough Heifetz’s violin case deflected the blow, he clutched his hand in pain. As he entered the lobby, his bodyguard ran in pursuit of the attacker but found only the bar, wrapped in newspaper, a few feet from the hotel.\n\nSeventy years later, the man who attacked Jascha Heifetz has not been identified. A faction called Han oar Haivri (or Hebrew Youth), later linked to several right-wing extremist groups, took responsibility, but no one has ever been held accountable.",
+      "date_of_publish": "2022-08-15T14:30:09Z",
+      "topic": [
+        6
+      ],
+      "publishers": [
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "newspaper.article",
+    "pk": 3,
+    "fields": {
+      "title": "The Real-World Costs of the Digital Race for Bitcoin",
+      "content": "Texas was gasping for electricity. Winter Storm Uri had knocked out power plants across the state, leaving tens of thousands of homes in icy darkness. By the end of Feb. 14, 2021, nearly 40 people had died, some from the freezing cold.\n\nMeanwhile, in the husk of a onetime aluminum smelting plant an hour outside of Austin, row upon row of computers were using enough electricity to power about 6,500 homes as they raced to earn Bitcoin, the world’s largest cryptocurrency.\n\nThe computers were performing trillions of calculations per second, hunting for an elusive combination of numbers that Bitcoin’s algorithm would accept. About every 10 minutes, a computer somewhere guesses correctly and wins a small number of Bitcoins worth, in recent weeks, about $170,000. Anyone can try, but to make a business of it can require as much electricity as a small city.\n\nIn Texas, the computers kept running until just after midnight. Then the state’s power grid operator ordered them shut off, under an agreement that allowed it to do so if the system was about to fail. In return, it began paying the Bitcoin company, Bitdeer, an average of $175,000 an hour to keep the computers offline. Over the next four days, Bitdeer would make more than $18 million for not operating, from fees ultimately paid by Texans who had endured the storm.\n\nThe New York Times has identified 34 such large-scale operations, known as Bitcoin mines, in the United States, all putting immense pressure on the power grid and most finding novel ways to profit from doing so. Their operations can create costs — including higher electricity bills and enormous carbon pollution — for everyone around them, most of whom have nothing to do with Bitcoin.\n\nUntil June 2021, most Bitcoin mining was in China. Then it drove out Bitcoin operations, at least for a time, citing their power use among other reasons. The United States quickly became the industry’s global leader.\n\nSince then, precisely how much electricity Bitcoin mines are using in America and their effect on energy markets and the environment have been unclear. The Times, using both public and confidential records as well as the results of studies it commissioned, put the most comprehensive estimates to date on the largest operations’ power use and the ripple effects of their voracious demand.",
+      "date_of_publish": "2022-08-15T14:30:09Z",
+      "topic": [
+        2
+      ],
+      "publishers": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "newspaper.article",
+    "pk": 4,
+    "fields": {
+      "title": "Can Intelligence Be Separated From the Body?",
+      "content": "What is the relationship between mind and body?\n\nMaybe the mind is like a video game controller, moving the body around the world, taking it on joy rides. Or maybe the body manipulates the mind with hunger, sleepiness and anxiety, something like a river steering a canoe. Is the mind like electromagnetic waves, flickering in and out of our light-bulb bodies? Or is the mind a car on the road? A ghost in the machine?\n\nMaybe no metaphor will ever quite fit because there is no distinction between mind and body: There is just experience, or some kind of physical process, a gestalt.\n\nThese questions, agonized over by philosophers for centuries, are gaining new urgency as sophisticated machines with artificial intelligence begin to infiltrate society. Chatbots like OpenAI’s GPT-4 and Google’s Bard have minds, in some sense: Trained on vast troves of human language, they have learned how to generate novel combinations of text, images and even videos. When primed in the right way, they can express desires, beliefs, hopes, intentions, love. They can speak of introspection and doubt, self-confidence and regret.\n\nBut some A.I. researchers say that the technology won’t reach true intelligence, or true understanding of the world, until it is paired with a body that can perceive, react to and feel around its environment. For them, talk of disembodied intelligent minds is misguided — even dangerous. A.I. that is unable to explore the world and learn its limits, in the ways that children figure out what they can and can’t do, could make life-threatening mistakes and pursue its goals at the risk of human welfare.\n\n“The body, in a very simple way, is the foundation for intelligent and cautious action,” said Joshua Bongard, a roboticist at the University of Vermont. “As far as I can see, this is the only path to safe A.I.”\n\nAt a lab in Pasadena, Calif., a small team of engineers has spent the past few years developing one of the first pairings of a large language model with a body: a turquoise robot named Moxie. About the size of a toddler, Moxie has a teardrop-shaped head, soft hands and alacritous green eyes. Inside its hard plastic body is a computer processor that runs the same kind of software as ChatGPT and GPT-4. Moxie’s makers, part of a start-up called Embodied, describe the device as “the world’s first A.I. robot friend.”",
+      "date_of_publish": "2022-08-15T14:30:09Z",
+      "topic": [
+        2
+      ],
+      "publishers": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "newspaper.article",
+    "pk": 5,
+    "fields": {
+      "title": "Jet-Setting With Clarence Thomas Puts Spotlight on an Eccentric Billionaire",
+      "content": "WASHINGTON — Shortly after the leak of the draft opinion to overturn Roe v. Wade, Justice Clarence Thomas made headlines last spring when he told an audience in Dallas that the breach might have permanently damaged the court. Less noticed was what he said about his longtime friend, the conservative Texas real estate billionaire Harlan Crow.\n\nAs the justice settled into a chair by a fireplace at Old Parkland, a palatial office complex, his interviewer, John Yoo, a law professor at the University of California, Berkeley, thanked Mr. Crow, the owner of Old Parkland, for making “this wonderful facility available” for the talk.\n\n“I know Harlan hates that,” Mr. Yoo said, a reference to the eccentric and press-averse Mr. Crow’s dislike of praise in public.\n\n“That’s why I wouldn’t say it,” Justice Thomas chimed in, amused. “I’d like to keep that friendship.”\n\nThe precise nature of the friendship between the justice and Mr. Crow is under new scrutiny since ProPublica revealed last week that Justice Thomas did not disclose lavish gifts from Mr. Crow, including travel on the billionaire’s private jet, stays at his Adirondacks resort and island hopping in Indonesia on his superyacht.\n\nAlthough Justice Thomas has said the two have been close friends for decades and the trips were personal, Mr. Crow — a longtime donor to conservative causes whose Dallas home includes paintings by Renoir and a signed copy of “Mein Kampf” — did not meet the justice until he was already on the court. The relationship has raised questions about whether such a friendship can be separated from politics and has intensified calls from Democrats for transparency and an ethics code for the justices...",
+      "date_of_publish": "2022-08-15T14:30:09Z",
+      "topic": [
+        1,
+        2
+      ],
+      "publishers": [
+        2,
+        4
+      ]
+    }
+  }
+]
