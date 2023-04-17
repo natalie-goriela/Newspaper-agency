@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="body-main-centring">
+    <h1>{{ redactor.first_name }} {{ redactor.last_name }} ({{ redactor.username }})</h1>
+    <br>
+    <h6>Registered on site: {{ redactor.date_joined }}</h6>
+    <h6>Last login: {{ redactor.last_login }}</h6>
+    <h6>Years in journalism: {{ redactor.years_of_experience }}</h6>
+    <br>
+    <h5>E-mail: {{ redactor.email }}</h5>
+    <br>
+    <h4>Articles:</h4>
+    {% for article in redactor.articles.all %}
+      <hr>
+      <p><strong>Title:</strong> {{ article.title }}</p>
+      <p><strong>Date of publish:</strong> {{ article.date_of_publish }}</p>
+      <p><strong>Topics:</strong> {% for topic in article.topic.all %}{{ topic.name }} {% endfor %}</p>
+    {% empty %}
+      <p>This author has not written any articles yet</p>
+    {% endfor %}
+    <br>
+    {% if user.id == redactor.pk %}
+      <a href="{% url 'newspaper:redactor-update' pk=redactor.pk %}" class="btn btn-outline-primary">Edit my profile</a>
+    {% endif %}
+    {% if user.is_staff %}
+      <a href="{% url 'newspaper:redactor-delete' pk=redactor.pk %}" class="btn btn-danger">Delete this profile</a>
+    {% endif %}
+  </section>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <div class="container card mb-2 mt-4 create-button">
+      <a href="{% url 'newspaper:article-create' %}" class="btn btn-secondary my-xxl-3">Create new article</a>
+    </div>
+  {% endif %}
+  <section class="pt-lg-3 mb-3 pb-lg-2 mt-3 section section-md">
+    {% if article_list %}
+      <div class="container pt-lg-3 mb-3 pb-lg-2 mt-3">
+        <form action="" method="get" class="form-inline" novalidate>
+          {{ search_form|crispy }}
+          <br>
+          <input type="submit" value="Search" class="btn btn-secondary">
+        </form>
+      </div>
+      {% for article in article_list %}
+        <div class="container card pt-lg-3 mb-3 pb-lg-2 mt-3">
+          <h3>{{ article.title }}</h3>
+          <p>Related topics:
+            {% for topic in article.topic.all %}
+              {{ topic.name }}
+              {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </p>
+          <p>Created at: {{ article.date_of_publish }}</p>
+          <p class="blockquote mb-0">
+            Redactors:
+            {% for publisher in article.publishers.all %}
+              {{ publisher.first_name }} {{ publisher.last_name }}
+              {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </p>
+          <span><a href="{% url 'newspaper:article-detail' pk=article.id %}" class="btn btn-primary my-xxl-3">Read more</a></span>
+        </div>
+      {% endfor %}
+    {%  else %}
+      <h3>There are no articles yet!</h3>
+    {% endif %}
+  </section>
+{% endblock %}

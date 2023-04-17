@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="body-main-centring">
+    <h1 class="article-detail-h1">{{ article.title }}</h1>
+    <br>
+    <p class="article-content">{{ article.content }}</p>
+    <p><i>{{ article.date_of_publish }}</i></p>
+    <p>
+      <strong>Author{{ article.publishers.count|pluralize }}:</strong>
+      {% for publisher in article.publishers.all %}
+        {{ publisher.first_name }} {{ publisher.last_name }}
+      {% endfor %}
+    </p>
+    {% if user.is_authenticated %}
+      <a href="{% url 'newspaper:article-update' pk=article.id %}" class="btn btn-outline-primary">Edit this article</a>
+      <a href="{% url 'newspaper:article-delete' pk=article.pk %}" class="btn btn-danger my-xxl-3">Delete this article</a>
+    {% endif %}
+  </section>
+{% endblock %}
