@@ -1,4 +1,6 @@
-NEWSPAPER AGENT is a project designed to help a team of redactors to organize their work on creating 
+# NEWSPAPER AGENCY 
+
+is a project designed to help a team of redactors to organize their work on creating 
 articles for different newspapers.
 Redactors are able to register on the site and have their own personal profile page, 
 which is only accessible to authenticated users of the site. This personal page allows redactors 
@@ -9,6 +11,8 @@ However, all users of the site, including non-registered users, are able to read
 
 The website includes a variety of topics for articles, which are listed on a separate page for easy navigation. 
 By clicking on a single topic, all relevant articles associated with that topic will be displayed.
+
+### Running project locally
 
 To run this projects locally, use the following steps:
 
@@ -25,12 +29,12 @@ venv\Scripts\activate (on Windows)
 source venv/bin/activate (on macOS)
 pip install -r requirements.txt
 ```
-   
-The secret key to this project is saved within .env file, which is hidden.
-You can create your own `.env` file to store your `SECRET_KEY`, `DB_NAME` and other environment 
-variables like it is shown in `.env_sample` file. 
 
-After running migrations, use the following command to load prepared data from fixture:
+3. Run the migrations:
+
+`python manage.py migrate`
+
+4. Use the following command to load prepared data from fixture:
   
 `python manage.py loaddata newspaper_agency_db_data.json`
 
@@ -39,3 +43,9 @@ Upon loading data from fixture you can use following superuser (or create anothe
   - Password: `1qazcde3`
 
 Feel free to add more data using admin panel, if needed.
+
+### Environment variables
+   
+The secret key to this project is saved within .env file, which is hidden.
+You can create your own `.env` file to store your `SECRET_KEY`, `DB_NAME` and other environment 
+variables like it is shown in `.env_sample` file. 
