@@ -33,7 +33,7 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
 
 ASSETS_ROOT = "/static/assets"
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "newspaper-agency-s2nx.onrender.com"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "debug_toolbar",
     "crispy_bootstrap4",
     "crispy_forms",
     "newspaper",
@@ -58,7 +57,6 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
