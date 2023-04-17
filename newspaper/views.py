@@ -39,7 +39,7 @@ class ArticleListView(generic.ListView):
         return context
 
     def get_queryset(self):
-        queryset = Article.objects.all().prefetch_related("topic", "publishers")
+        queryset = Article.objects.prefetch_related("topic", "publishers")
         title = self.request.GET.get("title")
 
         if title:
@@ -80,7 +80,7 @@ class RedactorListView(generic.ListView):
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor
-    queryset = Redactor.objects.all().prefetch_related(
+    queryset = Redactor.objects.prefetch_related(
         "articles__topic",
     )
 
@@ -113,7 +113,7 @@ class TopicListView(generic.ListView):
 
 class TopicDetailView(generic.DetailView):
     model = Topic
-    queryset = Topic.objects.all().prefetch_related("articles__publishers")
+    queryset = Topic.objects.prefetch_related("articles__publishers")
 
 
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
