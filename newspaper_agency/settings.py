@@ -33,7 +33,7 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
 
 ASSETS_ROOT = "/static/assets"
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "newspaper-agency-s2nx.onrender.com"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
