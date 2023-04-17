@@ -49,3 +49,7 @@ Feel free to add more data using admin panel, if needed.
 The secret key to this project is saved within .env file, which is hidden.
 You can create your own `.env` file to store your `SECRET_KEY`, `DB_NAME` and other environment 
 variables like it is shown in `.env_sample` file. 
+
+### Deploy
+
+[Newspaper Agent deployed on Render](https://newspaper-agency-s2nx.onrender.com)
